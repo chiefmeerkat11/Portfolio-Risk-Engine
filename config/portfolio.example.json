@@ -1,0 +1,68 @@
+{
+  "portfolio_name": "Global Multi-Currency Demo Portfolio (Illustrative)",
+  "is_private": false,
+  "illustrative_disclaimer": "Illustrative demo portfolio for software verification and educational purposes only. Does not represent any real investment club holdings or investment advice.",
+  "settings": {
+    "base_currency": "EUR",
+    "start_date": "2021-01-01",
+    "end_date": null,
+    "max_ffill_days": 5,
+    "min_backtest_days": 500,
+    "rolling_window_days": 252,
+    "benchmark_ticker": "IWDA.AS",
+    "benchmark_currency": "EUR",
+    "benchmark_crisis_proxy": "SPY",
+    "benchmark_crisis_proxy_currency": "USD",
+    "risk_free_rate": 0.025,
+    "equilibrium_erp": 0.07,
+    "confidence_levels": [0.95, 0.99],
+    "horizons_days": [1, 10, 252],
+    "random_seed": 42
+  },
+  "advisory_thresholds": {
+    "single_pos_equal_share_mult": 1.65,
+    "risk_weight_ratio_high": 1.25,
+    "risk_weight_ratio_low": 0.80,
+    "sector_equal_share_mult": 1.50,
+    "min_sectors_for_flag": 4,
+    "foreign_ccy_risk_max_pct": 65.0,
+    "enb_to_n_min_ratio": 0.60,
+    "max_dd_excess_vs_bm_pct": 3.0,
+    "kupiec_p_value_min": 0.05,
+    "avg_corr_high": 0.50,
+    "max_pair_corr_high": 0.75,
+    "rebalance_trim_pct_per_pos": 1.5,
+    "rebalance_top_k": 3
+  },
+  "sector_proxy_map": {
+    "Information Technology": {"ticker": "XLK", "currency": "USD"},
+    "Communication Services": {"ticker": "XLC", "currency": "USD"},
+    "Health Care": {"ticker": "XLV", "currency": "USD"},
+    "Financials": {"ticker": "XLF", "currency": "USD"},
+    "Consumer Discretionary": {"ticker": "EXV5.DE", "currency": "EUR"},
+    "Consumer Staples": {"ticker": "XLP", "currency": "USD"},
+    "Industrials": {"ticker": "XLI", "currency": "USD"},
+    "Energy": {"ticker": "XLE", "currency": "USD"}
+  },
+  "stress_scenarios": [
+    {
+      "name": "auto_top_sector",
+      "target_sector": "AUTO_TOP_RISK_SECTOR",
+      "sector_shock": -0.25,
+      "other_equity_shock": -0.08,
+      "non_base_fx_shock": -0.08
+    }
+  ],
+  "holdings": [
+    {"ticker": "ASML.AS", "weight": 0.18, "currency": "EUR", "sector": "Information Technology", "region": "Europe"},
+    {"ticker": "AAPL",    "weight": 0.17, "currency": "USD", "sector": "Information Technology", "region": "North America"},
+    {"ticker": "SAP.DE",  "weight": 0.14, "currency": "EUR", "sector": "Information Technology", "region": "Europe"},
+    {"ticker": "JPM",     "weight": 0.11, "currency": "USD", "sector": "Financials",             "region": "North America"},
+    {"ticker": "SAN.MC",  "weight": 0.09, "currency": "EUR", "sector": "Financials",             "region": "Europe"},
+    {"ticker": "OR.PA",   "weight": 0.08, "currency": "EUR", "sector": "Consumer Staples",       "region": "Europe"},
+    {"ticker": "JNJ",     "weight": 0.07, "currency": "USD", "sector": "Health Care",            "region": "North America"},
+    {"ticker": "SIE.DE",  "weight": 0.06, "currency": "EUR", "sector": "Industrials",            "region": "Europe"},
+    {"ticker": "XOM",     "weight": 0.05, "currency": "USD", "sector": "Energy",                 "region": "North America"},
+    {"ticker": "PG",      "weight": 0.05, "currency": "USD", "sector": "Consumer Staples",       "region": "North America"}
+  ]
+}

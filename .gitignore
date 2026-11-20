@@ -1,0 +1,15 @@
+# Virtual environment & Python cache
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Private club portfolio configurations & private outputs (NEVER COMMIT)
+config/portfolio_private.json
+config/*private*.json
+outputs/private/
+
+# Legacy root-level generated artifacts
+portfolio_risk_dashboard.png
+risk_report_dashboard.html
+club_risk_report_anonymized.html
